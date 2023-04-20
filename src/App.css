@@ -1,0 +1,346 @@
+@font-face {
+  font-family: biz;
+  src: url("./biz-udpgothic.ttf");
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: biz;
+  height: 300vh;
+}
+header {
+  display: flex;
+  background-color: #d7b294;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+  padding: 20px;
+  width: 100%;
+}
+
+header > img {
+  padding: 0px 0px 0px 60px;
+}
+
+.button__container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.button__container > a {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.button__container > a:first-child {
+  margin: 0;
+}
+
+.invite {
+  display: flex;
+  padding: 80px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  z-index: 1000;
+}
+.invite__left {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  z-index: 2;
+}
+.invite__title {
+  color: #8c5a30;
+  font-size: 44px;
+  line-height: 1.5;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.invite__description {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.invite > img {
+  width: 30%;
+}
+
+.invite__button {
+  width: 30%;
+  margin-left: 70%;
+  height: 60px;
+  border-radius: 12px;
+  color: #fff;
+  border: none;
+  background-color: #ac7795;
+}
+
+.home {
+  background-color: #b4c98a;
+  padding: 120px 96px 96px 96px;
+}
+
+.home__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 65px;
+  /* identical to box height, or 130% */
+
+  /* white */
+
+  color: #ffffff;
+}
+
+.home__imgBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+hr {
+  width: 193px;
+  border: 1px solid #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 56px;
+}
+
+.imgBox {
+  width: 50%;
+}
+
+.imgBox > img {
+  object-fit: cover;
+}
+
+img {
+  object-fit: cover;
+}
+
+.contacts {
+  display: flex;
+  padding: 80px 90px 80px 90px;
+  flex-direction: column;
+}
+
+.contacts__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 65px;
+  text-transform: uppercase;
+
+  /* identical to box height, or 130% */
+
+  /* rose */
+
+  color: #ac7795;
+}
+
+.contacts > hr {
+  border: 3px double #ac7795;
+}
+
+.contacts__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right {
+  box-shadow: 0px 0px 27px 4px rgba(34, 60, 80, 0.2);
+  padding: 20px;
+}
+
+.input__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+
+.input__row > input {
+  background: #d7b29f;
+  height: 60px;
+  border-color: inherit;
+  color: #fff;
+  border-radius: 6px;
+  width: 50%;
+}
+
+.contacts__footer {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  /* black */
+
+  color: #000000;
+  padding-top: 20px;
+}
+
+.map {
+  background-color: #d7b294;
+  padding: 90px;
+}
+
+.map > hr {
+  border: 3px double #fff;
+}
+
+.map__title {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 65px;
+  /* identical to box height, or 130% */
+
+  /* white */
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.map__left {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #fff;
+}
+
+.map__left > div {
+  padding-top: 30px;
+}
+
+.map__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: #b4c98a;
+  padding: 40px 80px 40px 80px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__link > a {
+  margin-right: 20px;
+}
+
+.footer__number {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height, or 150% */
+
+  /* white */
+
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
